@@ -10,7 +10,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem
+} from 'reactstrap';
 import logo from '../../assets/logo.png'
 
 export default class Example extends React.Component {
@@ -36,40 +37,41 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/" className="nav-link-color flex-display"><i class="material-icons">
-build
-</i>Crear Orden</NavLink>
+                <NavLink href="/components/" className="nav-link-color flex-display">
+                  <i class="material-icons">
+                    build
+                  </i>Crear Orden</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap" className="nav-link-color flex-display">
-                <i class="material-icons">
-description
-</i>Facturas</NavLink>
+                  <i class="material-icons">
+                    description
+                  </i>Facturas</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret className="nav-link-color flex-display">
-                <i class="material-icons">
-perm_identity
-</i>
+                  <i class="material-icons">
+                    perm_identity
+                  </i>
                   Administracion
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem className="nav-link-color flex-display">
-                  <i class="material-icons">
-account_box
-</i>
+                    <i class="material-icons">
+                      account_box
+                    </i>
                     Perfil
                   </DropdownItem>
                   <DropdownItem className="nav-link-color flex-display">
-                  <i class="material-icons">
-edit
-</i>
+                    <i class="material-icons">
+                      edit
+                      </i>
                     Crear Rubros
                   </DropdownItem>
                   <DropdownItem className="nav-link-color flex-display">
-                  <i class="material-icons">
-add_circle_outline
-</i>
+                    <i class="material-icons">
+                      add_circle_outline
+                    </i>
                     Crear Articulo
                   </DropdownItem>
                   <DropdownItem divider />
