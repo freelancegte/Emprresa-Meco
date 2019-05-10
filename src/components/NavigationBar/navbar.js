@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
+import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png'
 
 export default class Example extends React.Component {
@@ -43,10 +44,11 @@ export default class Example extends React.Component {
                   </i>Crear Orden</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap" className="nav-link-color flex-display">
+            
+                <Link to="/about" className="nav-link-color flex-display">
                   <i class="material-icons">
                     description
-                  </i>Facturas</NavLink>
+                  </i>Facturas</Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret className="nav-link-color flex-display">

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container } from 'reactstrap';
-import NavigationBar from './components/NavigationBar/navbar';
+
 
 
 function App() {
   return (
     <React.Fragment>
-       <NavigationBar />
+      
       <Container>
       <h1>Container here</h1>
     </Container>
