@@ -31,7 +31,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div className="header">
-        <Navbar color="light" className="height-header" light expand="md">
+        <Navbar color="light" className="height-header bg-white" light expand="md">
           <NavbarBrand href="/"><img src={logo} alt="Logo" className="img-logo"></img></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
