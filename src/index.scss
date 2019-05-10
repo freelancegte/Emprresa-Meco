@@ -12,4 +12,6 @@ code {
     monospace;
 }
 // Here we will import all unique css
+@import './styles//colors.scss';
 @import './App.scss';
+
