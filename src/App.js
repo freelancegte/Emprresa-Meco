@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'reactstrap';
-import NavigationBar from './components/navbar';
+import NavigationBar from './components/NavigationBar/navbar';
 
 
 function App() {

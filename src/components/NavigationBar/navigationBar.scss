@@ -1,0 +1,22 @@
+.header{
+    @media only screen and (min-width: 780px) {
+        .height-header{
+            height: 100px;
+        }
+      }
+      box-shadow: 0 0 5px 0 $funGreen;
+      .nav-link-color{
+          color:#6c7293!important;
+      }
+      .nav-link-color:hover{
+          color:$funGreen !important;
+      }
+      .flex-display{
+          align-items: center;
+        display: flex;
+    }
+    .img-logo{
+        width: 69px;
+    height: auto;
+    }
+}
