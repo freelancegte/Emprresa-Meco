@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -37,15 +36,15 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/" className="nav-link-color flex-display">
+              <NavItem className="nav-links">
+                <Link to="/orden" className="nav-link-color flex-display" >
                   <i class="material-icons">
                     build
-                  </i>Crear Orden</NavLink>
+                  </i>Crear Orden</Link>
               </NavItem>
-              <NavItem>
+              <NavItem className="nav-links">
 
-                <Link to="/about" className="nav-link-color flex-display">
+                <Link to="/facturas" className="nav-link-color flex-display">
                   <i class="material-icons">
                     description
                   </i>Facturas</Link>

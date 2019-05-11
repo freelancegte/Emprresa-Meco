@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'reactstrap';
+import Card from './components/Card/card';
 
 
 
@@ -8,7 +9,7 @@ function App() {
     <React.Fragment>
 
       <Container>
-        <h1>Container here</h1>
+        <Card />
       </Container>
 
     </React.Fragment>

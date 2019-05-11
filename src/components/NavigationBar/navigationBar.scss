@@ -1,4 +1,5 @@
 .header{
+    margin-bottom: 65px;
     .bg-white{
         background-color: $white;
     }
@@ -18,8 +19,14 @@
           align-items: center;
         display: flex;
     }
+
     .img-logo{
         width: 69px;
     height: auto;
+    }
+    .nav-links{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 14px;
     }
 }

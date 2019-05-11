@@ -1,0 +1,26 @@
+.card{
+    .card-container{
+        height: 70%;
+    border: none;
+    box-shadow: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    }
+    text-align: center;
+    border: none;
+    box-shadow: 0 0 2px 0 $funGreen;
+    height: 70vh;
+    .card-img{
+        width: 111px;
+        border: solid 1px $funGreen;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-button{
+        color: white!important;
+        background-color: $yellowOrange;
+        color: $yellowOrange;
+    border-color: $yellowOrange;
+    }
+}

@@ -13,8 +13,9 @@ ReactDOM.render(
     <Router>
         <NavigationBar />
         <Route path="/" exact component={App} />
-        <Route path="/about/" component={App} />
-        <Route path="/users/" component={App} />
+        <Route path="/orden" component={App} />
+        <Route path="/facturas" component={App} />
+        <Route path="/factura/:id" component={App} />
     </Router>,
     document.getElementById('root'));
 
