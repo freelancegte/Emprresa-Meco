@@ -3,6 +3,10 @@
     .bg-white{
         background-color: $white;
     }
+    a:hover {
+        text-decoration: none;
+        font-weight:bold
+    }
     @media only screen and (min-width: 780px) {
         .height-header{
             height: 100px;
