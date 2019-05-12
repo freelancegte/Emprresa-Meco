@@ -58,10 +58,11 @@ export default class Example extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem className="nav-link-color flex-display">
-                    <i class="material-icons">
-                      account_box
-                    </i>
-                    Perfil
+                    <Link to="/perfil" className="nav-link-color flex-display">
+                      <i class="material-icons">
+                        account_box
+                  </i>Perfil</Link>
+
                   </DropdownItem>
                   <DropdownItem className="nav-link-color flex-display">
                     <i class="material-icons">

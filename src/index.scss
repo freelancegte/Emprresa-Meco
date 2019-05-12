@@ -15,4 +15,7 @@ code {
 @import './App.scss';
 @import './components//NavigationBar/navigationBar.scss';
 @import './components/Card/card.scss';
+@import './modules//createOrder/order.scss';
+@import './modules/createOrder/OrderReport/orderReport.scss';
+@import './modules/createOrder/OrderTable//orderTables.scss';
 

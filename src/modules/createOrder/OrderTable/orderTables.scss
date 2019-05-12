@@ -1,0 +1,14 @@
+.table-father{
+    td, th {
+        text-align: center;
+        padding: .2rem!important;
+        /* vertical-align: top; */
+        /* border-top: 1px solid #dee2e6; */
+    }
+    .bg-row-color{
+        background-color: $funGreen;
+    }
+    .gray-color-bg{
+        background-color: $schooner
+    }
+}

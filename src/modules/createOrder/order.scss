@@ -1,0 +1,12 @@
+.order{
+    margin-bottom: 42px;
+    &.display-flex{
+        display:flex
+    }
+    .border-green{
+        box-shadow: 0 0 2px 0 $funGreen;
+    }
+    .create-card-height{
+        min-height: 500px;
+    }
+}
