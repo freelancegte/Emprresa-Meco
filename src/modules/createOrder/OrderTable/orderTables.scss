@@ -1,14 +1,40 @@
+.table-responsive{
+    box-shadow: 0 0 2px 0 $funGreen!important;
+}
 .table-father{
     td, th {
         text-align: center;
         padding: .2rem!important;
         /* vertical-align: top; */
         /* border-top: 1px solid #dee2e6; */
+        color:$grayColor;
     }
     .bg-row-color{
         background-color: $funGreen;
     }
+    .display-grid{
+        display: grid;
+    }
+    .white-text{
+        color: $white;
+    }
     .gray-color-bg{
         background-color: $schooner
     }
+    .black-text{
+        font-weight: bold;
+    }
+    .white-bg{
+        background-color: $white;
+    }
+    .img-bill{
+        width: 250px;
+        height: 150px;
+}
+    .table-no-border{
+        td, tr{
+            border: none;
+        }
+    }
+    
 }

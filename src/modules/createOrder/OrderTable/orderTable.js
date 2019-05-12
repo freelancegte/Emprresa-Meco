@@ -1,85 +1,88 @@
 import React from 'react';
 import { Table } from 'reactstrap';
+import img1 from '../../../assets/img1.jpg';
+import img2 from '../../../assets/img2.jpg';
 
 export default class Example extends React.Component {
     render() {
         return (
-            <Table bordered responsive className="table-father">
+            <Table className="table-father" bordered responsive >
                 <thead>
                     <tr className="bg-row-color">
-                        <th colSpan={3}>ROCA SERVICIOS</th>
-                        <th colSpan={4}>ORDEN DE TRABAJO</th>
-                        <th colSpan={3}>Bagaces Gte. 8321-4114</th>
+                        <th colSpan={3} className="white-text">ROCA SERVICIOS</th>
+                        <th colSpan={4} className="white-text">ORDEN DE TRABAJO</th>
+                        <th colSpan={4} className="white-text">Bagaces Gte. 8321-4114</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colSpan={2}>Datos empresa</td>
+                        <td colSpan={2} className="black-text">Datos empresa</td>
                         <td colSpan={5}>El Paraje Del unicornio S,A  3-101-737142</td>
-                        <td colSpan={3}>rmonge.68@gmail.com  rocaservicios17@gmail.com</td>
+                        <td colSpan={4}>rmonge.68@gmail.com  rocaservicios17@gmail.com</td>
                     </tr>
                     <tr>
-                        <td colSpan={10}>Reparacion de Mando  final</td>
+                        <td colSpan={2} className="black-text">Detalle del Trabajo</td>
+                        <td colSpan={7}>Reparacion de Mando  final</td>
+                        <td className="black-text" colSpan={1}># Orden</td>
+                        <td colSpan={1}>333</td>
                     </tr>
                     <tr>
-                        <td>CDGO cliente</td>
-                        <td colSpan={2}>Nombre Cliente</td>
-                        <td>Correo</td>
-                        <td>Telefono</td>
-                        <td>Direccion</td>
-                        <td>Horas Equipo</td>
-                        <td colSpan={2}>Datos Equipo</td>
-                        <td>Finca</td>
-                    </tr>
-                    <tr className="gray-color-bg">
-                        <td></td>
-                        <td colSpan={2}></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td colSpan={2}></td>
-                        <td></td>
+                        <td className="black-text">CDGO cliente</td>
+                        <td colSpan={2} className="black-text">Nombre Cliente</td>
+                        <td className="black-text">Correo</td>
+                        <td className="black-text">Telefono</td>
+                        <td className="black-text">Direccion</td>
+                        <td className="black-text">Horas Equipo</td>
+                        <td className="black-text" colSpan={3}>Datos Equipo</td>
+                        <td className="black-text">Finca</td>
                     </tr>
                     <tr>
-                        <td colSpan={2}>Observaciones</td>
-                        <td colSpan={10}></td>
-                    </tr>
-                    <tr className="gray-color-bg">
-                        <td colSpan={10}></td>
+                        <td>333</td>
+                        <td colSpan={2}>El Paraje Unicornio</td>
+                        <td>rmonge.68@gmail.com</td>
+                        <td>3333-3333</td>
+                        <td>Bagaces, Guanacaste</td>
+                        <td>4</td>
+                        <td colSpan={3}>Varias Pruebas</td>
+                        <td>NA</td>
                     </tr>
                     <tr>
-                        <td colSpan={2}>Digitador</td>
-                        <td colSpan={5}></td>
-                        <td colSpan={1}>Fecha</td>
-                        <td colSpan={2}></td>
+                        <td colSpan={2} className="black-text">Observaciones</td>
+                        <td colSpan={9}>Necesidad de traer materiales fuera del pais</td>
+                    </tr>
+                    <tr>
+                        <td colSpan={2} className="black-text">Digitador</td>
+                        <td colSpan={5}>Cesar Gamboa Avellan</td>
+                        <td colSpan={2} className="black-text">Fecha</td>
+                        <td colSpan={2}>4/13/2019</td>
 
                     </tr>
                     <tr>
                         <td colSpan={5}></td>
-                        <td colSpan={1}>Contado</td>
+                        <td colSpan={1} className="black-text">Contado</td>
                         <td colSpan={1}></td>
-                        <td colSpan={1}>Credito</td>
+                        <td colSpan={1} className="black-text">Credito</td>
                         <td colSpan={1}>x</td>
-                        <td colSpan={2}>Plazo</td>
+                        <td colSpan={1} className="black-text">Plazo</td>
+                        <td colSpan={1} className="black-text"></td>
                     </tr>
-                    <td colSpan={10}></td>
                 </tbody>
-                <thead>
+                <thead className="table-no-border">
                     <tr className="bg-row-color">
-                        <th colSpan={1} >Unidad</th>
-                        <th colSpan={1}>Codigo</th>
-                        <th colSpan={2}>Descripcion del trabajo
+                        <td colSpan={1} className="white-text">Unidad</td>
+                        <td colSpan={1} className="white-text">Codigo</td>
+                        <td colSpan={2} className="white-text">Descripcion del trabajo
 
-                        </th>
-                        <th colSpan={2}>Tiempo</th>
-                        <th colSpan={1}>I.V.A</th>
-                        <th colSpan={1}>Costo M.O por rubro</th>
-                        <th colSpan={1}>Descuento</th>
-                        <th colSpan={1}>Total</th>
+                        </td>
+                        <td colSpan={2} className="white-text">Tiempo</td>
+                        <td colSpan={1} className="white-text">I.V.A</td>
+                        <td colSpan={1} className="white-text">Costo M.O por rubro</td>
+                        <td colSpan={1} className="white-text">Descuento</td>
+                        <td colSpan={1} className="white-text">Total</td>
+                        <td colSpan={1}></td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="table-no-border">
                     <tr>
                         <td colSpan={1}>1</td>
                         <td colSpan={1}>MO0001</td>
@@ -91,23 +94,27 @@ export default class Example extends React.Component {
                         <td colSpan={1}>$35</td>
                         <td colSpan={1}>$3.50</td>
                         <td colSpan={1}>$42</td>
+                        <td colSpan={1}><i class="material-icons">
+                            add_circle_outline
+                    </i></td>
                     </tr>
                 </tbody>
-                <thead>
+                <thead className="table-no-border">
                     <tr className="bg-row-color">
-                        <th colSpan={1}>Unidad</th>
-                        <th colSpan={1}>Codigo</th>
-                        <th colSpan={2}>Descripcion del trabajo
+                        <td colSpan={1} className="white-text">Unidad</td>
+                        <td colSpan={1} className="white-text">Codigo</td>
+                        <td colSpan={2} className="white-text">Descripcion del trabajo
 
-                        </th>
-                        <th colSpan={2}>Total unitario</th>
-                        <th colSpan={1}>I.V.A</th>
-                        <th colSpan={1}>Subtotal</th>
-                        <th colSpan={1}>Descuento</th>
-                        <th colSpan={1}>Total</th>
+                        </td>
+                        <td colSpan={2} className="white-text">Total unitario</td>
+                        <td colSpan={1} className="white-text">I.V.A</td>
+                        <td colSpan={1} className="white-text">Subtotal</td>
+                        <td colSpan={1} className="white-text">Descuento</td>
+                        <td colSpan={1} className="white-text">Total</td>
+                        <td colSpan={1}></td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="table-no-border">
                     <tr>
                         <td colSpan={1}>0.25</td>
                         <td colSpan={1}>SUM10010</td>
@@ -119,15 +126,47 @@ export default class Example extends React.Component {
                         <td colSpan={1}>$2.25</td>
                         <td colSpan={1}>-</td>
                         <td colSpan={1}>$2.54</td>
+                        <td colSpan={1}><i class="material-icons">
+                            remove_circle_outline
+                    </i></td>
                     </tr>
                 </tbody>
-                <tbody>
+                <tbody className="table-no-border">
+                    <tr className="bg-row-color">
+                        <td colSpan={6} className="white-text">Totales</td>
+                        <td colSpan={1} className="white-text">$1000</td>
+                        <td colSpan={1} className="white-text">$100</td>
+                        <td colSpan={1} className="white-text">$200</td>
+                        <td colSpan={1} className="white-text">$954</td>
+                        <td colSpan={1}></td>
+                    </tr>
+                </tbody>
+                <thead className="table-no-border">
+                    <tr className="white-bg">
+                        <td colSpan={10}></td>
+                    </tr>
                     <tr>
-                        <td colSpan={6}>Totales</td>
-                        <td colSpan={1}>$1000</td>
-                        <td colSpan={1}>$100</td>
-                        <td colSpan={1}>$200</td>
-                        <td colSpan={1}>$954</td>
+                        <td colSpan={4} className="black-text">Resumen</td>
+                        <td colSpan={7} className="black-text">Imagenes</td>
+                    </tr>
+                </thead>
+                <tbody className="table-no-border">
+                    <tr>
+                        <td colSpan={4}>
+                            <div className="display-grid">
+                                <span>DESMONTAR MANDO FINAL POR FUAGA</span>
+                                <span>AJUSTE DEL MANDO</span>
+                                <span>REPUESTOS A INSTALAR</span>
+                                <span>PROCESO DE ARMADO</span>
+                                <span>MANDO ARMADO</span>
+                                <span>MANDO INSTALADO</span>
+                                <span>PRUEBA REALIZADA UNA DESPUES DEL INTALACION DEL MANDO</span>
+                            </div>
+                        </td>
+                        <td colSpan={6}>
+                            <img src={img1} className="img-bill" alt="dummy1" />
+                            <img src={img2} alt="dummy2" className="img-bill" />
+                        </td>
                     </tr>
                 </tbody>
             </Table>
