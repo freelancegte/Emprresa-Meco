@@ -1,17 +1,47 @@
 import React from 'react';
 import OrderTable from './OrderTable/orderTable';
-// import TextValidator from '../../components/Inputs/textValidator';
-// import { ValidatorForm } from 'react-form-validator-core';
-// import { Input } from 'reactstrap';
+
 
 
 
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+
+            rowRubro: [
+                {
+                    unidad: 1,
+                    code: 'MO001',
+                    description: 'Desmontaje y Mando Final',
+                    timeStart: '8:30',
+                    timeEnd: '17:00',
+                    iva: '4.10',
+                    costByRubro: '35',
+                    descuento: '3.5',
+                }
+            ],
+            rowArticulo: [
+                {
+                    unidad: 0.25,
+                    code: 'MO001',
+                    description: 'Desmontaje y Mando Final',
+                    totalUnitario: '9.00',
+                    iva: '4.10',
+                    subTotal: '2.25',
+                    descuento: '-',
+                }
+            ],
+        }
     }
     handleSubmit = () => {
         console.log('submit');
+    }
+    handleRow = (newRow) => {
+        console.log('this is the new row', newRow);
+        this.setState({
+            rowRubro: this.state.rowRubro.concat(newRow)
+        })
     }
     handleChange = (e, type) => {
         if (type === 'email') {
@@ -38,50 +68,13 @@ class App extends React.Component {
     render() {
         return (
             <div className="col-12 order display-flex ">
-                {/* <div className="col-2 create-card-height">
-                    <h4>Agregar Rubro o Servicio</h4>
-
-                    <ValidatorForm
-                        ref="form"
-                        onSubmit={this.handleSubmit}
-                    >
-                        <span>
-                            Unidad
-                    </span>
-                        <TextValidator
-                            onChange={(e) => this.handleChange(e, 'string')}
-                            name="Nombre del Cliente"
-                            value="0.5"
-                            validators={['required']}
-                            errorMessages={['Campo requerido', 'este valor es un numero']}
-                        />
-                        <span>
-                            Codigo
-                    </span>
-                        <Input type="select" name="select">
-                            <option>MO0001</option>
-                            <option>MO0002</option>
-                            <option>MO0003</option>
-                            <option>MO0004</option>
-                            <option>MO0005</option>
-                        </Input>
-                        <span>
-                            Descripcion
-                    </span>
-                        <TextValidator
-                            onChange={(e) => this.handleChange(e, 'string')}
-                            name="Descripcion"
-                            value="Remover volante"
-                            validators={['required']}
-                            errorMessages={['Campo requerido', 'este valor es un numero']}
-                        />
-                        <div className="div-button-form">
-                            <button type="submit">Agregar</button>
-                        </div>
-                    </ValidatorForm>
-                </div> */}
                 <div className="col-12 create-card-height">
-                    <OrderTable />
+                    <OrderTable
+                        emptyRow={this.state.emptyRow}
+                        rowRubro={this.state.rowRubro}
+                        addRow={this.handleRow}
+                        rowArticulo={this.state.rowArticulo}
+                    />
                 </div>
             </div>
         );

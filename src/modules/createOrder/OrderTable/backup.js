@@ -4,25 +4,6 @@ import img1 from '../../../assets/img1.jpg';
 import img2 from '../../../assets/img2.jpg';
 
 export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            emptyRow: {
-                unidad: 'test',
-                code: 'test',
-                description: 'test',
-                timeStart: 'test',
-                timeEnd: 'test',
-                iva: 'test',
-                costByRubro: 'test',
-                descuento: 'test',
-            },
-        }
-    }
-    handleInputChange = (evento, type) => {
-        console.log(evento.target.value, type);
-    }
-
     render() {
         return (
             <Table className="table-father" bordered responsive >
@@ -102,42 +83,6 @@ export default class Example extends React.Component {
                     </tr>
                 </thead>
                 <tbody className="table-no-border">
-
-                    <tr>
-                        <td colSpan={1}><input type="text" onChange=
-                            {(e) => this.handleInputChange(e, 'unidad')}>
-                        </input></td>
-                        <td colSpan={1}><input type="text" onChange=
-                            {(e) => this.handleInputChange(e, 'codigo')}>
-                        </input></td>
-                        <td colSpan={2}>
-                            <input type="text" onChange=
-                                {(e) => this.handleInputChange(e, 'descripcion')}>
-                            </input>
-                        </td>
-                        <td colSpan={2}><input type="text" onChange=
-                            {(e) => this.handleInputChange(e, 'tiempo')}>
-                        </input></td>
-                        <td colSpan={1}><input type="text" onChange=
-                            {(e) => this.handleInputChange(e, 'iva')}>
-                        </input></td>
-                        <td colSpan={1}><input type="text" onChange=
-                            {(e) => this.handleInputChange(e, 'costoRubro')}>
-                        </input></td>
-                        <td colSpan={1}><input type="text" onChange=
-                            {(e) => this.handleInputChange(e, 'descuento')}>
-                        </input></td>
-                        <td colSpan={1}><input type="text" onChange=
-                            {(e) => this.handleInputChange(e, 'total')}>
-                        </input></td>
-                        <td colSpan={1}>
-                            <button onClick={() => this.props.addRow(this.state.emptyRow)}>
-                                <i class="material-icons">
-                                    add_circle_outline
-                    </i>
-                            </button>
-                        </td>
-                    </tr>
                     {
                         this.props.rowRubro.map((rowsElement) => {
                             return (
@@ -153,7 +98,7 @@ export default class Example extends React.Component {
                                     <td colSpan={1}>${rowsElement.descuento}</td>
                                     <td colSpan={1}>$42</td>
                                     <td colSpan={1}><i class="material-icons">
-                                        remove_circle_outline
+                                        add_circle_outline
                     </i></td>
                                 </tr>
                             )
