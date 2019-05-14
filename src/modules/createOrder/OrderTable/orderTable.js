@@ -47,13 +47,13 @@ export default class Example extends React.Component {
                     <tr>
                         <td colSpan={2} className="black-text">Datos empresa</td>
                         <td colSpan={5}>El Paraje Del unicornio S,A  3-101-737142</td>
-                        <td colSpan={4}>rmonge.68@gmail.com  rocaservicios17@gmail.com</td>
+                        <td colSpan={4}>{this.props.data.correoCliente}  rocaservicios17@gmail.com</td>
                     </tr>
                     <tr>
                         <td colSpan={2} className="black-text">Detalle del Trabajo</td>
-                        <td colSpan={7}>Reparacion de Mando  final</td>
+                        <td colSpan={7}>{this.props.data.descripcionTrabajo}</td>
                         <td className="black-text" colSpan={1}># Orden</td>
-                        <td colSpan={1}>333</td>
+                        <td colSpan={1}>{this.props.data.numeroOrden}</td>
                     </tr>
                     <tr>
                         <td className="black-text">CDGO cliente</td>
@@ -66,34 +66,34 @@ export default class Example extends React.Component {
                         <td className="black-text">Finca</td>
                     </tr>
                     <tr>
-                        <td>333</td>
-                        <td colSpan={2}>El Paraje Unicornio</td>
-                        <td>rmonge.68@gmail.com</td>
-                        <td>3333-3333</td>
-                        <td>Bagaces, Guanacaste</td>
+                        <td>{this.props.data.codigoCliente}</td>
+                        <td colSpan={2}>{this.props.data.nombreCliente}</td>
+                        <td>{this.props.data.correoCliente}</td>
+                        <td>{this.props.data.telefonoCliente}</td>
+                        <td>{this.props.data.direccionCliente}</td>
                         <td>4</td>
-                        <td colSpan={3}>Varias Pruebas</td>
-                        <td>NA</td>
+                        <td colSpan={3}>{this.props.data.datosEquipo}</td>
+                        <td>{this.props.data.finca}</td>
                     </tr>
                     <tr>
                         <td colSpan={2} className="black-text">Observaciones</td>
-                        <td colSpan={9}>Necesidad de traer materiales fuera del pais</td>
+                        <td colSpan={9}>{this.props.data.observaciones}</td>
                     </tr>
                     <tr>
                         <td colSpan={2} className="black-text">Digitador</td>
-                        <td colSpan={5}>Cesar Gamboa Avellan</td>
+                        <td colSpan={5}>{this.props.data.digitador}</td>
                         <td colSpan={2} className="black-text">Fecha</td>
-                        <td colSpan={2}>4/13/2019</td>
+                        <td colSpan={2}>{this.props.data.fecha}</td>
 
                     </tr>
                     <tr>
                         <td colSpan={5}></td>
                         <td colSpan={1} className="black-text">Contado</td>
-                        <td colSpan={1}></td>
+                        <td colSpan={1}>{this.props.data.tipoFactura === 'contado' ? 'x' : ''}</td>
                         <td colSpan={1} className="black-text">Credito</td>
-                        <td colSpan={1}>x</td>
+                        <td colSpan={1}>{this.props.data.tipoFactura === 'credito' ? 'x' : ''}</td>
                         <td colSpan={1} className="black-text">Plazo</td>
-                        <td colSpan={1} className="black-text"></td>
+                        <td colSpan={1} className="black-text">{this.props.data.tipoFactura === 'plazo' ? 'x' : ''}</td>
                     </tr>
                 </tbody>
                 <thead className="table-no-border">
@@ -152,7 +152,7 @@ export default class Example extends React.Component {
                         </td>
                     </tr>
                     {
-                        this.props.rowRubro.map((rowsElement) => {
+                        this.props.data.rowRubro.map((rowsElement) => {
                             return (
                                 <tr>
                                     <td colSpan={1}>{rowsElement.unidad}</td>
@@ -226,7 +226,7 @@ export default class Example extends React.Component {
                         </td>
                     </tr>
                     {
-                        this.props.rowArticulo.map((articulo) => {
+                        this.props.data.rowArticulo.map((articulo) => {
                             return (<tr>
                                 <td colSpan={1}>{articulo.unidad}</td>
                                 <td colSpan={1}>{articulo.code}</td>

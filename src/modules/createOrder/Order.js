@@ -1,6 +1,6 @@
 import React from 'react';
 import OrderTable from './OrderTable/orderTable';
-
+import { restElement } from '@babel/types';
 
 
 
@@ -8,7 +8,22 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            isDataComplete: true,
+            codigoCliente: '#234',
+            nombreCliente: 'El Paraje Unicornio',
+            cedulaJuridicaCliente: '3-101-737142',
+            correoCliente: 'rmonge.68@gmail.com',
+            telefonoCliente: '4445-3334',
+            direccionCliente: 'Guanacaste',
+            horasEquipo: '8',
+            datosEquipo: 'NA',
+            finca: '3',
+            numeroOrden: '#88992',
+            descripcionTrabajo: 'Reparacion Mando Final',
+            digitador: '',
+            tipoFactura: 'credito',
+            observaciones: '',
+            fecha: '',
             rowRubro: [
                 {
                     unidad: 1,
@@ -74,15 +89,17 @@ class App extends React.Component {
         }
     }
     render() {
+
         return (
             <div className="col-12 order display-flex ">
                 <div className="col-12 create-card-height">
-                    <OrderTable
-                        emptyRow={this.state.emptyRow}
-                        rowRubro={this.state.rowRubro}
-                        addRow={this.handleRow}
-                        rowArticulo={this.state.rowArticulo}
-                    />
+                    {
+                        this.state.isDataComplete && <OrderTable
+                            addRow={this.handleRow}
+                            data={this.state}
+                            rowArticulo={this.state.rowArticulo}
+                        />
+                    }
                 </div>
             </div>
         );
