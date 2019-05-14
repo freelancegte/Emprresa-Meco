@@ -59,10 +59,23 @@ export default function DropZone(props) {
     }, [files]);
 
     return (
-        <section className="container">
+        <section className="drop-zone">
             <div {...getRootProps({ className: 'dropzone' })}>
                 <input {...getInputProps()} />
-                <p>Drag 'n' drop some files here, or click to select files</p>
+                {
+                    thumbs.length >= 1 ? <p>
+                        <i class="material-icons ">
+                            loop
+</i>
+                    </p> : <p className="drop-space">
+                            <i class="material-icons dropzone-icons">
+                                perm_media
+</i>
+                            <span>Agregar Imagenes</span>
+
+                        </p>
+                }
+
             </div>
             <aside style={thumbsContainer}>
                 {thumbs}

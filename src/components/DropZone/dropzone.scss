@@ -1,0 +1,31 @@
+.drop-zone{
+    
+    margin-left: auto;
+    margin-right: auto;
+    .drop-space{
+    height: 200px;
+    display: grid;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:  0 2px 2px -2px $funGreen;
+        background-color: #f9f9fc; 
+    }
+    .dropzone-icons{
+        font-size: 90px;
+        color: $schooner;
+    }
+    .drop-space:hover{
+        box-shadow:  0 0px 4px 0px $funGreen;
+        background-color: #f9f9fc; 
+    }
+}
+.dropzone:hover{
+    outline: none !important;
+    border: none;
+}
+.dropzone:focus{
+    border: none;
+    outline: none !important;
+    border: none;
+}
