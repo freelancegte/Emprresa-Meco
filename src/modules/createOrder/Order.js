@@ -43,28 +43,6 @@ class App extends React.Component {
             rowRubro: this.state.rowRubro.concat(newRow)
         })
     }
-    handleChange = (e, type) => {
-        if (type === 'email') {
-            this.setState({
-                email: e.target.value,
-            })
-        }
-        if (type === 'domain') {
-            this.setState({
-                domain: e.target.value,
-            })
-        }
-        if (type === 'number') {
-            this.setState({
-                number: e.target.value,
-            })
-        }
-        if (type === 'string') {
-            this.setState({
-                string: e.target.value,
-            })
-        }
-    }
     render() {
         return (
             <div className="col-12 order display-flex ">
