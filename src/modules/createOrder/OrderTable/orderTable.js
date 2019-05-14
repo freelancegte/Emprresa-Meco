@@ -2,6 +2,7 @@ import React from 'react';
 import { Table } from 'reactstrap';
 import img1 from '../../../assets/img1.jpg';
 import img2 from '../../../assets/img2.jpg';
+import DropZone from '../../../components/DropZone/dropzone';
 
 export default class Example extends React.Component {
     constructor(props) {
@@ -279,8 +280,7 @@ export default class Example extends React.Component {
                             </div>
                         </td>
                         <td colSpan={6}>
-                            <img src={img1} className="img-bill" alt="dummy1" />
-                            <img src={img2} alt="dummy2" className="img-bill" />
+                            <DropZone />
                         </td>
                     </tr>
                 </tbody>
