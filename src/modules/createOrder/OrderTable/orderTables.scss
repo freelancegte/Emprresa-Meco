@@ -1,5 +1,6 @@
 .table-responsive{
     box-shadow: 0 0 2px 0 $funGreen!important;
+    background-color: $white;
 }
 .table-father{
     td, th {
@@ -26,6 +27,32 @@
     }
     .white-bg{
         background-color: $white;
+    }
+    .row-button{
+        border: none;
+    background: transparent;
+    }
+    .row-inputs{
+        border: none;
+        box-shadow:  0 2px 2px -2px $schooner;
+    }
+    .add-icon{
+        color: green;
+        font-size: 1.7em;
+    }
+    .remove-icon{
+        color: red;
+    }
+    .row-inputs:hover{
+        border: none;
+        border-bottom: solid 2px $funGreen;
+        box-shadow:  0 2px 2px -2px #026639;
+    }
+    .row-inputs:focus{
+        outline: none !important;
+        border: none;
+        border-bottom: solid 2px $funGreen;
+        box-shadow:  0 2px 2px -2px #026639;
     }
     .img-bill{
         width: 250px;
