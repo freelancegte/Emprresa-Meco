@@ -37,12 +37,20 @@ class App extends React.Component {
     handleSubmit = () => {
         console.log('submit');
     }
-    handleRow = (newRow) => {
+    handleRow = (newRow, typeOfRow) => {
         console.log('this is the new row', newRow);
+       if(typeOfRow === 'rubro'){
         this.setState({
             rowRubro: this.state.rowRubro.concat(newRow)
         })
     }
+        else{
+            this.setState({
+                rowArticulo: this.state.rowArticulo.concat(newRow)
+            })
+        }
+       }
+    
     handleChange = (e, type) => {
         if (type === 'email') {
             this.setState({

@@ -17,6 +17,16 @@ export default class Example extends React.Component {
                 costByRubro: 'test',
                 descuento: 'test',
             },
+            rowArticle: {
+                unidad: '',
+                code: 'test',
+                description: 'test',
+                totalUnitario: '',
+                iva: 'test',
+                subtotal: 'test',
+                descuento: 'test',
+
+            }
         }
     }
     handleInputChange = (evento, type) => {
@@ -131,7 +141,7 @@ export default class Example extends React.Component {
                             {(e) => this.handleInputChange(e, 'total')}>
                         </input></td>
                         <td colSpan={1}>
-                            <button onClick={() => this.props.addRow(this.state.emptyRow)}>
+                            <button onClick={() => this.props.addRow(this.state.emptyRow, 'rubro')}>
                                 <i class="material-icons">
                                     add_circle_outline
                     </i>
@@ -176,6 +186,42 @@ export default class Example extends React.Component {
                     </tr>
                 </thead>
                 <tbody className="table-no-border">
+                
+                <tr>
+                        <td colSpan={1}><input type="text" onChange=
+                            {(e) => this.handleInputChange(e, 'unidad')}>
+                        </input></td>
+                        <td colSpan={1}><input type="text" onChange=
+                            {(e) => this.handleInputChange(e, 'codigo')}>
+                        </input></td>
+                        <td colSpan={2}>
+                            <input type="text" onChange=
+                                {(e) => this.handleInputChange(e, 'descripcion')}>
+                            </input>
+                        </td>
+                        <td colSpan={2}><input type="text" onChange=
+                            {(e) => this.handleInputChange(e, 'tiempo')}>
+                        </input></td>
+                        <td colSpan={1}><input type="text" onChange=
+                            {(e) => this.handleInputChange(e, 'iva')}>
+                        </input></td>
+                        <td colSpan={1}><input type="text" onChange=
+                            {(e) => this.handleInputChange(e, 'costoRubro')}>
+                        </input></td>
+                        <td colSpan={1}><input type="text" onChange=
+                            {(e) => this.handleInputChange(e, 'descuento')}>
+                        </input></td>
+                        <td colSpan={1}><input type="text" onChange=
+                            {(e) => this.handleInputChange(e, 'total')}>
+                        </input></td>
+                        <td colSpan={1}>
+                            <button onClick={() => this.props.addRow(this.state.emptyRow)}>
+                                <i class="material-icons">
+                                    add_circle_outline
+                    </i>
+                            </button>
+                        </td>
+                    </tr>
                     {
                         this.props.rowArticulo.map((articulo) => {
                             return (<tr>
